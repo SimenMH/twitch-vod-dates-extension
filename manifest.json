@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Twitch VOD Dates",
+  "version": "0.1.0",
+  "description": "Replaces the 'X days ago' with the actual date the VOD was created",
+  "content_scripts": [
+    {
+      "matches": ["https://*.twitch.tv/*"],
+      "js": ["twitch-vod-dates.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "host_permissions": ["https://*.twitch.tv/*"]
+}
